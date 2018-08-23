@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /target/awscodedeploydemo-0.0.1-SNAPSHOT.jar
+    destination: /tmp/codedeploy-deployment-staging-area/
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
